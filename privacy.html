@@ -16,7 +16,7 @@
 <body>
 <div class="wrap">
   <h1>Privacy Policy</h1>
-  <p><em>Last updated: 7 June 2026</em></p>
+  <p><em>Last updated: 18 June 2026</em></p>
 
   <p>Squint is built so there is nothing to collect. We do not operate a server,
   and the app contains no analytics, advertising, or third-party tracking SDKs.</p>
@@ -25,11 +25,25 @@
   <p><strong>Nothing leaves your device.</strong> Squint's App Privacy label is
   "Data Not Collected" in every category.</p>
 
-  <h2>Camera &amp; face data</h2>
-  <p>The front TrueDepth camera is used solely to compute the distance between
-  your face and the screen so test letters are sized correctly. Squint reads only
-  a single distance value. The camera image, depth map, and face mesh are never
-  stored and never transmitted.</p>
+  <h2>Face data (TrueDepth / ARKit)</h2>
+  <p><strong>What is collected:</strong> On devices with a TrueDepth camera,
+  Squint uses ARKit face tracking during a vision self-check to read one number:
+  the distance, in meters, between your face and the screen. This is derived from
+  the position of ARKit's face anchor. Squint does <strong>not</strong> access or
+  read the camera image, the depth map, the face mesh or geometry, facial
+  blend-shapes/expressions, or any facial features, and it does not use face data
+  to identify or authenticate you.</p>
+  <p><strong>How it is used:</strong> The single distance value is used in real
+  time, only while a self-check is on screen, to size the eye-chart letters
+  correctly for your viewing distance and to warn you if the phone is too close.</p>
+  <p><strong>Sharing / disclosure:</strong> Face data is never shared, sold, or
+  disclosed to anyone. Squint has no server and contains no analytics, advertising,
+  or third-party SDKs, so this data is never transmitted off your device.</p>
+  <p><strong>Storage / retention:</strong> The face data (camera image, depth map,
+  and face mesh) is never stored — it is processed live in memory and discarded
+  immediately. The distance number is not retained as face data; only the derived
+  self-check result (for example, the line you could read) is saved locally on your
+  device, with no facial information attached.</p>
 
   <h2>Where your data lives</h2>
   <p>Your self-check history, eye-break records, and journal entries are stored
